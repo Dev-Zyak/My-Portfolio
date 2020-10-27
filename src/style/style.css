@@ -1,0 +1,82 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "eurostile-extended", sans-serif;
+  font-family: "europa", sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #eeeeee;
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 10vh;
+  background: #202020;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.Header .Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.Header .Container .Button {
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.Header .Container .Button:hover {
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

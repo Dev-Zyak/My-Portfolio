@@ -1,0 +1,61 @@
+$main: rgb(32, 32, 32);
+$secondary: rgb(175, 211, 223);
+$background: rgb(238, 238, 238);
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "eurostile-extended", sans-serif;
+  font-family: "europa", sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  height: fit-content;
+  background: $background;
+}
+
+.Header {
+  display: flex;
+  align-self: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 10vh;
+  background: $main;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+
+  .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+
+    .Button {
+      transition: 0.3s color;
+      display: flex;
+      color: white;
+      height: fit-content;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.3s color;
+        color: black;
+      }
+    }
+  }
+}
