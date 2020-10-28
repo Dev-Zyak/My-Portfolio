@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import Background from "./images/background1.jpg"
+import Background from "./images/background.jpg"
 
 function App() {
   return (
