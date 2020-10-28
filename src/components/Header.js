@@ -4,10 +4,10 @@ import Button from "./Button";
 const Header = () => {
     return <div className="Header">
         <div className="Container">
-        <Button text="About"/>
-        <Button text="Contact"/>
-        <Button text="My CV"/>
-        <Button />
+        <Button text="ABOUT"/>
+        <Button text="MY WORK"/>
+        <Button text="MY CV"/>
+        <Button text="CONTACT"/>
         </div>
 
 
