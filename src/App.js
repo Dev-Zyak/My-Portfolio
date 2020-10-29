@@ -1,12 +1,10 @@
-import Header from "./components/Header";
-import Background from "./images/background.jpg"
+import React, { Component } from 'react';
+import Landing from "./components/Landing"
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="background"> <img src={Background}/></div>     
-      
+      <Landing />
     </div>
   );
 }

@@ -19,6 +19,7 @@ $background: rgb(231, 231, 231);
   min-height: 100vh;
   height: fit-content;
   background: $background;
+  position: relative;
 }
 
 .background {
@@ -82,12 +83,13 @@ $background: rgb(231, 231, 231);
         right: auto;
         content: "";
         position: absolute;
-        background: white;
+
         width: 80%;
         height: 5px;
         opacity: 0%;
         border-radius: 25px;
         left: -30px;
+        background: linear-gradient(12deg, hotpink, cyan);
       }
 
       &:hover {
@@ -105,5 +107,25 @@ $background: rgb(231, 231, 231);
         }
       }
     }
+  }
+}
+.nametextbox {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  color: white;
+  background: blue;
+  font-size: 5rem;
+  margin: auto;
+}
+
+.socialcontainer {
+  top: 60%;
+
+  .social {
   }
 }
