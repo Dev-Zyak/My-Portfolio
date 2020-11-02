@@ -9,9 +9,15 @@ const Landing = () => {
         <div>    
         <Header />
         <div className="background"> <img src={Background}/></div>    
-        <div className="nametextbox"> <h1>Conor Hutton</h1> </div>
-        <div className="socialcontainer">
-            <Social />
+        <div className="nametextbox"> <h1>Conor Hutton</h1>
+        
+        <div className="socialcontainer"> 
+        <Social />
+        <Social />
+        <Social />
+        </div>
+
+            
         </div>
         </div>)
 }

@@ -140,12 +140,66 @@
   right: 0px;
   z-index: 100;
   color: white;
-  background: blue;
   font-size: 5rem;
   margin: auto;
 }
 
 .socialcontainer {
-  top: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.socialcontainer .social {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 150;
+  border-radius: 50%;
+  position: relative;
+  border: 8px solid gray;
+  cursor: pointer;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+.socialcontainer .social:hover {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border: 8px solid white;
+}
+
+.socialcontainer .social:hover a img {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  height: 70%;
+  width: 70%;
+}
+
+.socialcontainer .social a img {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 /*# sourceMappingURL=style.css.map */
