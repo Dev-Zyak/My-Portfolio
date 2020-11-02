@@ -13,40 +13,36 @@
 }
 
 .App {
+  max-width: 100vw;
+  min-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.landing {
   min-height: 100vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: #e7e7e7;
+  background: #f0f0f0;
   position: relative;
 }
 
-.background {
-  width: 100%;
-  height: 100vh;
-}
-
-.background img {
-  height: auto;
-  max-height: 100vh;
-  width: 100%;
-}
-
 .Header {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-item-align: center;
       align-self: center;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 10vh;
-  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -54,8 +50,107 @@
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(rgba(0, 0, 0, 0.472)), to(rgba(31, 31, 31, 0)));
-  background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.472), rgba(31, 31, 31, 0));
+  background: #f6f6f6;
+}
+
+.Header .burger {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 5vh;
+  padding: 4px 0px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .burger div {
+  width: 80%;
+  background: #414141;
+  height: 5px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.Header .burger div div {
+  position: absolute;
+}
+
+.Header .burger div div:nth-child(1) {
+  width: 100%;
+  top: -10px;
+}
+
+.Header .burger div div:nth-child(2) {
+  width: 100%;
+  top: 10px;
+}
+
+@media all and (min-width: 500px) {
+  .Header .burger {
+    display: none;
+  }
+}
+
+.Header .burger-open div {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.Header .burger-close div {
+  background: transparent;
+}
+
+.Header .burger-close div div {
+  background: #202020;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.Header .burger-close div div:nth-child(1) {
+  -webkit-transform: rotateZ(-225deg);
+          transform: rotateZ(-225deg);
+  top: 0px;
+}
+
+.Header .burger-close div div:nth-child(2) {
+  -webkit-transform: rotateZ(225deg);
+          transform: rotateZ(225deg);
+  top: 0px;
+}
+
+.Header .headertext {
+  margin-left: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .headertext h1 {
+  font-size: 4rem;
+  font-family: "Lobster", cursive;
+  font-weight: 300;
 }
 
 .Header .Container {
@@ -68,13 +163,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
-  margin-right: 7%;
+  width: 20%;
+  margin-right: 4%;
 }
 
-.Header .Container :nth-last-child(1) {
-  border: 2px solid #d1d1d1;
-  border-radius: 5px;
+@media all and (max-width: 500px) {
+  .Header .Container {
+    display: none;
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    z-index: 10000;
+    left: 0px;
+  }
 }
 
 .Header .Container .Button {
@@ -83,15 +184,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #f1f1f1;
+  color: black;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
   position: relative;
+  font-weight: 500;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .Header .Container .Button::after {
@@ -113,14 +215,10 @@
 .Header .Container .Button:hover {
   -webkit-transition: 0.3s color;
   transition: 0.3s color;
-  color: white;
+  color: #1d7fff;
 }
 
-.Header .Container .Button:hover:last-child {
-  border-radius: #8b1616;
-}
-
-.Header .Container .Button:hover:not(:last-child)::after {
+.Header .Container .Button:hover::after {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   opacity: 100%;
@@ -128,6 +226,7 @@
 }
 
 .nametextbox {
+  font-family: eurostile;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

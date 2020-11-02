@@ -6,9 +6,10 @@ import Social from "./Social"
 
 const Landing = () => {
     return (
-        <div>    
+        <div className="landing">    
         <Header />
-        <div className="background"> <img src={Background}/></div>    
+        {/*<div className="background"> <img src={Background}/></div>   
+         
         <div className="nametextbox"> <h1>Conor Hutton</h1>
         
         <div className="socialcontainer"> 
@@ -18,7 +19,7 @@ const Landing = () => {
         </div>
 
             
-        </div>
+    </div>*/}
         </div>)
 }
 export default Landing;
