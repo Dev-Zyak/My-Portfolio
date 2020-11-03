@@ -1,12 +1,32 @@
 import React, { Component, useState } from 'react';
-import Button from "./Button";
+
 
 
 const Header = () => {
     let [burger, setburger ]= useState(false);
+    const buttons = document.querySelectorAll(".Button");
     function burgerfunc() { 
+        
+        console.log(buttons)
         setburger(!burger);
-        console.log(burger)
+        if (burger)
+        {
+            buttons.forEach((button, index) => {
+                setTimeout(() => {
+                    button.classList.add("displayflex")
+
+                }, 150 * index);
+            })
+        }
+        else
+        {
+            buttons.forEach((button, index) => {
+                    button.classList.remove("displayflex")
+
+            })
+        }
+        
+        
     }
 
     return <div className="Header">
@@ -20,13 +40,12 @@ const Header = () => {
 
         </div>
         <div className="Container">
-        <Button text="ABOUT"/>
-        <Button text="WORK"/>
-        <Button text="CV"/>
-        <Button text="CONTACT"/>
+        <div className="Button">HOME</div>
+        <div className="Button">WORK</div>
+        <div className="Button">ABOUT</div>
+        <div className="Button">CV</div>
+        <div className="Button">CONTACT</div>
         </div>
-
-
     </div>
 }
  
